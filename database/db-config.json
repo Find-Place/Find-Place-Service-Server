@@ -1,0 +1,6 @@
+{
+    "host" : "localhost",
+    "user": "root",
+    "database": "find_place", 
+    "password": "findplace123"
+}
