@@ -22,7 +22,7 @@ Then you can get the place information.
 
 ### **_Back Develope & AI_**
 
-<img src="" width="200" height="200" alt="이미지 경로 src 안에 넣어주세용">
+<img src="https://github.com/Find-Place/Find-Place-Service-Server/assets/74344298/31d314ab-dba7-47a7-aabf-25f5c191b98e" width="200" height="200" alt="이미지 경로 src 안에 넣어주세용">
 
 **이시온 SION-LEE**
 
@@ -33,13 +33,13 @@ Then you can get the place information.
 
 ### Front-dev
 
-    git clone https://github.com/Sunja-An/Find-Place-Service.git
+    git clone https://github.com/Find-Place/Find-Place-Service-Front.git
     npm install
     npm start
 
 ### Back-dev
 
-    git clone https://github.com/Sunja-An/Find-Place-Service.git
+    git clone https://github.com/Find-Place/Find-Place-Service-Server.git
     npm install
     npm start
 
