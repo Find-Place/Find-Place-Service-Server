@@ -3,7 +3,6 @@ const Photo = require('../model/photo');
 const request = require('request');
 const FormData = require('form-data');
 const axios = require('axios');
-
 const fs = require('fs');
 
 async function processImage(req, res, next) {
@@ -30,6 +29,7 @@ async function processImage(req, res, next) {
   })
     .then(response => {
       console.log('응답 받음:');
+      console.log(response.data)
     })
     .catch(error => {
       console.error('에러 발생:');
