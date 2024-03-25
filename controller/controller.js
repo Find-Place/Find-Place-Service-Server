@@ -4,7 +4,7 @@ const request = require('request');
 const FormData = require('form-data');
 const axios = require('axios');
 const fs = require('fs');
-const json_id = 1;
+var json_id = 0;
 
 async function processImage(req, res, next) {
   if (!req.file) {
@@ -31,7 +31,12 @@ async function processImage(req, res, next) {
     .then(response => {
       console.log('응답 받음:');
       const location_info = response.data.data
+      for (var i = 0; i < location_info.length; i++) {
+        location_info[i].rank = i + 1;
+      }
+
       console.log(location_info);
+      json_id += 1;
       res.status(200).json({
         id: json_id,
         locaiton: location_info
