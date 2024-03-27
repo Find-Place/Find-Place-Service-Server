@@ -1,6 +1,5 @@
 const path = require('path');
 const Photo = require('../model/photo');
-const request = require('request');
 const FormData = require('form-data');
 const axios = require('axios');
 const fs = require('fs');
@@ -31,14 +30,13 @@ async function processImage(req, res, next) {
     .then(response => {
       console.log('응답 받음:');
       const location_info = response.data.data
-      for (var i = 0; i < location_info.length; i++) {
-        location_info[i].rank = i + 1;
-      }
+      const latency = response.data.latency
 
       console.log(location_info);
       json_id += 1;
       res.status(200).json({
         id: json_id,
+        latency: latency,
         locaiton: location_info
       });
     })
